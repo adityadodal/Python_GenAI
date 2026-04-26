@@ -15,3 +15,14 @@ generator = pipeline("text-generation", model="gpt2")
 output = generator("Artificial Intelligence is",
                    max_new_tokens=40, num_return_sequences=1)
 print(output[0]['generated_text'])
+generator("Once upon a time", max_new_tokens=40)[0]['generated_text']
+
+print(generator("Once upon a time", max_new_tokens=70)[0]['generated_text'])
+
+print(generator("once upon a time in Germany during world war 2",
+      max_new_tokens=70)[0]['generated_text'])
+
+# We can also specify the temperature parameter to control the randomness of the output
+
+print(generator("once upon a time in Germany during world war 2",
+      max_new_tokens=70, temperature=0.9)[0]['generated_text'])
