@@ -26,3 +26,6 @@ print(generator("once upon a time in Germany during world war 2",
 
 print(generator("once upon a time in Germany during world war 2",
       max_new_tokens=70, temperature=0.9)[0]['generated_text'])
+
+print(generator("History of Adolf Hitler during world war 2",
+      max_new_tokens=99, temperature=0.9)[0]['generated_text'])
