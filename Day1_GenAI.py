@@ -29,3 +29,8 @@ print(generator("once upon a time in Germany during world war 2",
 
 print(generator("History of Adolf Hitler during world war 2",
       max_new_tokens=99, temperature=0.9)[0]['generated_text'])
+
+
+model = pipeline("text2text-generation", model="google/flan-t5-small")
+result = model("Explain what is machine learning")
+print(result)
