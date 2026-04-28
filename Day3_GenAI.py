@@ -30,13 +30,18 @@ for i, text in enumerate(generated_texts):
 # In addition to text generation, LLMs can also be used for other tasks such as question answering, summarization, and translation. Let's see how we can use a pre-trained model for question answering.
 # Load a pre-trained model for question answering
 qa_pipeline = pipeline(
+    # Note: 'document-question-answering' is used for models that can handle longer contexts, while 'question-answering' is typically used for shorter contexts.
     'document-question-answering',
+    # This is a smaller, faster model that is fine-tuned on the SQuAD dataset for question answering tasks.
     model='distilbert-base-cased-distilled-squad'
 )
 # Define a context and a question
+# This is the context that the model will use to answer the question. It contains the information that the model needs to know in order to provide an answer.
 context = "The capital of France is Paris."
+# This is the question that we want the model to answer based on the provided context.
 question = "What is the capital of France?"
 # Use the model to answer the question based on the context
+# The model will analyze the context and the question to generate an answer. The output will typically include the answer text and a confidence score indicating how confident the model is in its answer.
 answer = qa_pipeline(question=question, context=context)
 # Print the answer
 print(f"Answer: {answer['answer']}")
