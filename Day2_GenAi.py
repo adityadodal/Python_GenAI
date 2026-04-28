@@ -1,12 +1,12 @@
 # In this session we are gonna learn more about the generator models and also we will try
 # new types of models
 
-# '''from transformers import pipeline
+# from transformers import pipeline
 
 # model = pipeline("text-generation", model="gpt2")
 
 # result = model("Explain what is machine learning")
-# print(result)'''
+# print(result)
 
 from transformers import pipeline
 
