@@ -132,3 +132,4 @@ print("Filtered Tokens:", filtered_tokens)
 # as you can see, the functions work as expected, and you can use them to process different pieces of text for various NLP tasks.
 # that's all for this session. In the next session, we will learn about stop words and how to remove them from our text data using NLTK. Stay tuned!
 # goodbye!
+# PRACTICE THE ABOVE CODE AND TRY TO UNDERSTAND IT. IF YOU HAVE ANY QUESTIONS, FEEL FREE TO ASK. SEE YOU IN THE NEXT SESSION!
