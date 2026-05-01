@@ -31,3 +31,14 @@ print(response.data[0].url)
 # Finally, you can also use the openai library to generate code. Here is an example of how to generate code using the openai library:
 # Generate code using the OpenAI API
 response = openai.Completion.create(
+    engine="code-davinci-002",
+    prompt="Write a Python function that takes a list of numbers and returns the average.",
+    max_tokens=50  # Adjust the number of tokens as needed
+)
+# Print the generated code
+print(response.choices[0].text.strip())
+# In this example, we are using the "code-davinci-002" engine to    generate a Python function that takes a list of numbers and returns the average. You can customize the prompt and the engine to generate different types of code. You can also adjust the max_tokens parameter to control the length of the generated code.
+# This is just a basic introduction to using the openai library to interact with the Gemini API. You can explore the documentation and experiment with different prompts, engines, and parameters to generate a wide variety of text, images, and code.
+# Remember to always keep your API key secure and do not share it publicly.
+# For more information on the OpenAI API and the available models, you can refer to the official documentation: https://beta.openai.com/docs/
+# Happy coding!
