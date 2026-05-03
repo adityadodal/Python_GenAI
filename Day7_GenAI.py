@@ -27,3 +27,8 @@ print("Token IDs:", token_ids)
 decoded_text = tokenizer.decode(token_ids)
 
 print("Decoded Text:", decoded_text)
+
+# In this code, we are using the Hugging Face Transformers library to perform tokenization and detokenization. We load a pretrained tokenizer for the "google/flan-t5-small" model, which is a lightweight model suitable for learning purposes. We then tokenize a sample text and convert it into token IDs. Finally, we decode the token IDs back into readable text. You can experiment with different texts and models to see how tokenization and detokenization work!
+# Note: Make sure to install the transformers library if you haven't already by running:
+# pip install transformers
+# Happy coding!
