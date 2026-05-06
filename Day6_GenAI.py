@@ -39,3 +39,6 @@ response = openai.Completion.create(
 )
 # Print the generated text
 print("Generated Text:", response.choices[0].text.strip())
+# In this example, we are using the "text-davinci-003" model to generate text based on the prompt "Once upon a time in a land far, far away,". The `max_tokens` parameter specifies the maximum number of tokens to generate in the response. You can adjust this parameter to control the length of the generated text. Remember to replace 'your-api-key-here' with your actual OpenAI API key before running the code.
+# You can experiment with different prompts and models to see how the generated text changes. The OpenAI API offers a variety of models with different capabilities, so feel free to explore and find the one that best suits your needs. Happy coding!
+# For more information on the OpenAI API and the available models, you can refer to the official documentation: https://beta.openai.com/docs/
