@@ -42,3 +42,20 @@ print("Generated Text:", response.choices[0].text.strip())
 # In this example, we are using the "text-davinci-003" model to generate text based on the prompt "Once upon a time in a land far, far away,". The `max_tokens` parameter specifies the maximum number of tokens to generate in the response. You can adjust this parameter to control the length of the generated text. Remember to replace 'your-api-key-here' with your actual OpenAI API key before running the code.
 # You can experiment with different prompts and models to see how the generated text changes. The OpenAI API offers a variety of models with different capabilities, so feel free to explore and find the one that best suits your needs. Happy coding!
 # For more information on the OpenAI API and the available models, you can refer to the official documentation: https://beta.openai.com/docs/
+
+# Now let's try to use the Gemini API to generate a story based on a given prompt. Here is an example of how to do that using the openai library:
+# Set up your OpenAI API key
+openai.api_key = 'your-api-key-here'  # Replace with your actual API key
+# Define a prompt to generate a story from
+story_prompt = "In a small village nestled in the mountains, there lived a young girl named Lily. She had always dreamed of exploring the world beyond her village, but she was afraid of leaving her family and friends behind."
+# Generate a story using the OpenAI API
+story_response = openai.Completion.create(
+    model="text-davinci-003",
+    prompt=story_prompt,
+    max_tokens=200
+)
+# Print the generated story
+print("Generated Story:", story_response.choices[0].text.strip())
+# In this example, we are using the "text-davinci-003" model to generate a story based on the prompt about Lily, a young    girl        living in a small village. The `max_tokens` parameter is set to 200, which allows for a longer story to be generated. You can adjust this parameter to control the length of the story. Remember to replace 'your-api-key-here' with your actual OpenAI API key before running the code.
+# You can experiment with different story prompts and models to see how the generated stories change. The OpenAI API offers a variety of models with different capabilities, so feel free to explore and find the one that best suits your storytelling needs. Happy coding!
+# For more information on the OpenAI API and the available models, you can refer to the official documentation: https://beta.openai.com/docs/
