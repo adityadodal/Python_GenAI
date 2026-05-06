@@ -25,3 +25,17 @@ print("Detokenized Text:", detokenized_response.text)
 # In this example, we are using the "text-davinci-003" model to tokenize the input text "Hello, how are you doing today?" and then detokenize it back into text. You can customize the input text and the model to experiment with different tokenization and detokenization results. Remember to always keep your API key secure and do not share it publicly.
 # For more information on the OpenAI API and the available models, you can refer to the official documentation: https://beta.openai.com/docs/
 # Happy coding!
+
+# lets try to use the Gemini API to generate some text based on a prompt. Here is an example of how to do that using the openai library:
+# Set up your OpenAI API key
+openai.api_key = 'your-api-key-here'  # Replace with your actual API key
+# Define a prompt to generate text from
+prompt = "Once upon a time in a land far, far away,"
+# Generate text using the OpenAI API
+response = openai.Completion.create(
+    model="text-davinci-003",
+    prompt=prompt,
+    max_tokens=50
+)
+# Print the generated text
+print("Generated Text:", response.choices[0].text.strip())
