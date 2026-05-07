@@ -59,3 +59,21 @@ print("Generated Story:", story_response.choices[0].text.strip())
 # In this example, we are using the "text-davinci-003" model to generate a story based on the prompt about Lily, a young    girl        living in a small village. The `max_tokens` parameter is set to 200, which allows for a longer story to be generated. You can adjust this parameter to control the length of the story. Remember to replace 'your-api-key-here' with your actual OpenAI API key before running the code.
 # You can experiment with different story prompts and models to see how the generated stories change. The OpenAI API offers a variety of models with different capabilities, so feel free to explore and find the one that best suits your storytelling needs. Happy coding!
 # For more information on the OpenAI API and the available models, you can refer to the official documentation: https://beta.openai.com/docs/
+
+
+# Now let's try to use the Gemini API to generate a poem based on a given prompt. Here is an example of how to do that using the openai library:
+# Set up your OpenAI API key
+openai.api_key = 'your-api-key-here'  # Replace with your actual API key                
+# Define a prompt to generate a poem from
+poem_prompt = "Write a poem about the beauty of nature."
+# Generate a poem using the OpenAI API
+poem_response = openai.Completion.create(
+    model="text-davinci-003",
+    prompt=poem_prompt,
+    max_tokens=100
+)
+# Print the generated poem
+print("Generated Poem:", poem_response.choices[0].text.strip())
+# In this example, we are using the "text-davinci-003" model to generate a poem based on the prompt about the beauty of nature. The `max_tokens` parameter is set to 100, which allows for a reasonably long poem to be generated. You can adjust this parameter to control the length of the poem. Remember to replace 'your-api-key-here' with your actual OpenAI API key before running the code.        
+# You can experiment with different poem prompts and models to see how the generated poems change. The OpenAI API offers a variety of models with different capabilities, so feel free to explore and find the one that best suits your poetic needs. Happy coding!
+# For more information on the OpenAI API and the available models, you can refer to the official documentation: https://beta.openai.com/docs/   
